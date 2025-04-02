@@ -1,43 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose ID Card Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-6">
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-8">Choose ID Card Template</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Template 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden border-2 border-blue-500">
+                <div class="p-4 bg-blue-500 text-white">
+                    <h2 class="text-xl font-bold">Professional Blue</h2>
+                </div>
+                <div class="p-4">
+                    <img src="{{ asset('images/template1-preview.png') }}" alt="Template 1 Preview" class="w-full h-48 object-contain mb-4">
+                    <a href="{{ route('id-card.show', ['id' => $idCardId ?? 0, 'template' => 'template1']) }}" 
+                       class="block w-full bg-blue-500 text-white text-center py-2 rounded hover:bg-blue-600">
+                        Use This Template
+                    </a>
+                </div>
+            </div>
 
+            <!-- Template 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden border-2 border-green-500">
+                <div class="p-4 bg-green-500 text-white">
+                    <h2 class="text-xl font-bold">Corporate Green</h2>
+                </div>
+                <div class="p-4">
+                    <img src="{{ asset('images/template2-preview.png') }}" alt="Template 2 Preview" class="w-full h-48 object-contain mb-4">
+                    <a href="{{ route('id-card.show', ['id' => $idCardId ?? 0, 'template' => 'template2']) }}" 
+                       class="block w-full bg-green-500 text-white text-center py-2 rounded hover:bg-green-600">
+                        Use This Template
+                    </a>
+                </div>
+            </div>
 
+            <!-- Template 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden border-2 border-red-500">
+                <div class="p-4 bg-red-500 text-white">
+                    <h2 class="text-xl font-bold">Modern Red</h2>
+                </div>
+                <div class="p-4">
+                    <img src="{{ asset('images/template3-preview.png') }}" alt="Template 3 Preview" class="w-full h-48 object-contain mb-4">
+                    <a href="{{ route('id-card.show', ['id' => $idCardId ?? 0, 'template' => 'template3']) }}" 
+                       class="block w-full bg-red-500 text-white text-center py-2 rounded hover:bg-red-600">
+                        Use This Template
+                    </a>
+                </div>
+            </div>
 
-<div class="container mx-auto p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-
-    <!-- ID Card Type 1: Simple -->
-    <div id="id-card-1" class="w-64 border rounded-lg shadow-lg p-4 text-center bg-white">
-        <img src="{{ asset('images/profile.jpg') }}" alt="Profile" class="w-24 h-24 mx-auto rounded-full">
-        <h2 class="text-lg font-semibold mt-2">John Doe</h2>
-        <p class="text-gray-600 text-sm">Software Engineer</p>
-        <p class="text-gray-500 text-xs">ID: 123456</p>
-    </div>
-
-    <!-- ID Card Type 2: Modern with QR Code -->
-    <div id="id-card-2" class="w-64 border rounded-lg shadow-lg p-4 text-center bg-gray-100">
-        <h2 class="text-lg font-bold text-gray-800">Company Name</h2>
-        <img src="{{ asset('images/profile.jpg') }}" alt="Profile" class="w-24 h-24 mx-auto rounded-full">
-        <h3 class="text-md font-semibold mt-2">Jane Smith</h3>
-        <p class="text-gray-600 text-sm">Marketing Manager</p>
-        <p class="text-gray-500 text-xs">ID: 789012</p>
-        <img src="{{ asset('images/qr-code.png') }}" alt="QR Code" class="w-16 h-16 mx-auto mt-2">
-    </div>
-
-    <!-- ID Card Type 3: Corporate Style -->
-    <div id="id-card-3" class="w-64 border rounded-lg shadow-lg bg-blue-500 text-white p-4 text-center">
-        <img src="{{ asset('images/profile.jpg') }}" alt="Profile" class="w-24 h-24 mx-auto rounded-full border-2 border-white">
-        <h2 class="text-lg font-semibold mt-2">Alice Brown</h2>
-        <p class="text-sm">Senior Designer</p>
-        <p class="text-xs">ID: 345678</p>
-    </div>
-
-    <!-- ID Card Type 4: Minimalist Vertical -->
-    <div id="id-card-4" class="w-64 border rounded-lg shadow-lg bg-white p-4 flex flex-col items-center">
-        <div class="w-full bg-green-500 text-white py-2 text-center">
-            <h2 class="font-bold">Company ID</h2>
+            <!-- Template 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden border-2 border-purple-500">
+                <div class="p-4 bg-purple-500 text-white">
+                    <h2 class="text-xl font-bold">Creative Purple</h2>
+                </div>
+                <div class="p-4">
+                    <img src="{{ asset('images/template4-preview.png') }}" alt="Template 4 Preview" class="w-full h-48 object-contain mb-4">
+                    <a href="{{ route('id-card.show', ['id' => $idCardId ?? 0, 'template' => 'template4']) }}" 
+                       class="block w-full bg-purple-500 text-white text-center py-2 rounded hover:bg-purple-600">
+                        Use This Template
+                    </a>
+                </div>
+            </div>
         </div>
-        <img src="{{ asset('images/profile.jpg') }}" alt="Profile" class="w-24 h-24 mt-2 rounded-full">
-        <h3 class="text-md font-semibold mt-2">Michael Johnson</h3>
-        <p class="text-gray-600 text-sm">HR Manager</p>
-        <p class="text-gray-500 text-xs">ID: 901234</p>
     </div>
-
-</div>
+</body>
+</html>
