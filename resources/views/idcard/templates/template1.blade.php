@@ -44,7 +44,7 @@
             bottom: 3mm;
             font-size: 6pt;
             width: calc(100% - 10mm);
-            text-align: center;
+            
         }
     </style>
 </head>
@@ -54,7 +54,7 @@
         
         @if($idCard->photo)
         <div class="photo">
-            <img src="{{ storage_path('app/public/'.$idCard->photo) }}" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="{{ asset('storage/'.$idCard->photo) }}" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         @endif
         

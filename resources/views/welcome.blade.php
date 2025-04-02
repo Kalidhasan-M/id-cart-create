@@ -92,9 +92,9 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                             </svg>
                         </a>
-                        <a href="/templates" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 hover:border-gray-400 dark:border-gray-600 dark:hover:border-gray-400 font-medium rounded-md transition-colors">
+                        {{-- <a href="/templates" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 hover:border-gray-400 dark:border-gray-600 dark:hover:border-gray-400 font-medium rounded-md transition-colors">
                             View Templates
-                        </a>
+                        </a> --}}
                     </div>
                 </div>
                 

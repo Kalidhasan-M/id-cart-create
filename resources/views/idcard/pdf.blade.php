@@ -26,7 +26,7 @@
         <div style="display: flex; margin-top: 5px;">
             @if($idCard->photo)
             <div class="photo">
-                <img src="{{ storage_path('app/public/'.$idCard->photo) }}" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="{{ asset('storage/'.$idCard->photo) }}" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             @endif
             
